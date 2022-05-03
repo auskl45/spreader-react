@@ -1,12 +1,14 @@
 .accueil {
-  box-sizing: border-box;
+  background-color: #e4e3e3;
+  height: 100vh;
+  &__text {
+    font-family: 'Courier New', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    align-items: baseline;
+    padding: 1em;
+    background-color: #52ff80;
+    color: #fff;
   
-
-  font-family: 'Courier New', sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-  align-items: baseline;
-  padding: 1em;
-  background-color: #52ff80;
-  color: #fff;
+}
   }

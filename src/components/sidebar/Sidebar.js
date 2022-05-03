@@ -65,8 +65,9 @@ const Sidebar = () => {
         setActiveIndex(curPath.length === 0 ? 0 : activeItem);
     }, [location]);
 
-    return  <Col xs={4}> 
-        <div className="sidebar__logo">
+    return  <Col xs={3}  > 
+     <div className="sidebar" >
+        <div className="sidebar__logo" >
             Spreader
         </div>
         <div ref={sidebarRef} className="sidebar__menu">
@@ -90,7 +91,7 @@ const Sidebar = () => {
                 </Link>
             ))}
         </div>
-  
+        </div>
    
     </Col>
   
