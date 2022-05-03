@@ -1,6 +1,8 @@
 .accueil {
   background-color: #e4e3e3;
   height: 100vh;
+  border-right: solid;
+
   &__text {
     font-family: 'Courier New', sans-serif;
     font-size: 20px;
@@ -9,6 +11,6 @@
     padding: 1em;
     background-color: #52ff80;
     color: #fff;
-  
-}
+    border-bottom: solid black;
   }
+}

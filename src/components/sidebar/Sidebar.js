@@ -68,6 +68,7 @@ const Sidebar = () => {
     return  <Col xs={3}  > 
      <div className="sidebar" >
         <div className="sidebar__logo" >
+            <img src= "./green-bird-logo.png" width="50" height="50" alt='logo'/>
             Spreader
         </div>
         <div ref={sidebarRef} className="sidebar__menu">
