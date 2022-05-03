@@ -1,17 +1,16 @@
-import { Outlet } from "react-router-dom";
+import {Row} from 'react-bootstrap';
 import Sidebar from "../sidebar/Sidebar";
 import Stats from '../stats/Stats';
+import Blank from "../../pages/Blank";
 
 
 const AppLayout = () => {
-    return <div style={{
-        padding: '0px 0px 0px 320px',
-         display: 'inline-flex'
-        
-    }}>      
+    return <div>  
+        <Row>
         <Sidebar />
-        <Outlet />
+        <Blank/>
         <Stats></Stats>
+        </Row>    
     </div>
     ;
 };

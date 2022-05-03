@@ -1,11 +1,12 @@
 
 import '../styles/home.scss';
 import Textweet from '../components/posts/Textweet';
+import {Col } from 'react-bootstrap';
 const Blank = () => {
-    return <div>
-<div className='accueil'> Accueil</div>
+    return <Col xs={4}> 
+<div > Accueil</div>
    <Textweet></Textweet>
-    </div>   
+    </Col>   
     
 };
 

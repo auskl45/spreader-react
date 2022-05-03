@@ -1,7 +1,7 @@
-import '../../styles/stats.scss';
+import {Col } from 'react-bootstrap';
 const Stats = () => {
-    return( <div  className='stats'>Stats</div>
-     ) ;
+    return <Col xs={4}>  <div>Stats</div>
+      </Col> ;
 };
 
 export default Stats;

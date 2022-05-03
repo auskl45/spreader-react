@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import {Col } from 'react-bootstrap';
 
 import './sidebar.scss';
 
@@ -64,7 +65,7 @@ const Sidebar = () => {
         setActiveIndex(curPath.length === 0 ? 0 : activeItem);
     }, [location]);
 
-    return <div className='sidebar'>
+    return  <Col xs={4}> 
         <div className="sidebar__logo">
             Spreader
         </div>
@@ -89,7 +90,10 @@ const Sidebar = () => {
                 </Link>
             ))}
         </div>
-    </div>
+  
+   
+    </Col>
+  
     ;
 };
 

@@ -1,5 +1,6 @@
 import './App.scss';
 import 'boxicons/css/boxicons.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AppLayout from './components/layout/AppLayout';
 import Blank from './pages/Blank';
