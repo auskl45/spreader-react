@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {Col } from 'react-bootstrap';
 
-import './sidebar.scss';
+import '../../styles/sidebar.scss';
 
 const sidebarNavItems = [
     {
@@ -80,7 +80,7 @@ const Sidebar = () => {
                 }}
             ></div>
             {sidebarNavItems.map((item, index) => (
-                <Link to={item.to} key={index}>
+                <Link to={item.to} key={index} style={{ textDecoration: 'none' }}>
                     <div className={`sidebar__menu__item ${activeIndex === index ? 'active' : ''}`}>
                         <div className="sidebar__menu__item__icon">
                             {item.icon}
