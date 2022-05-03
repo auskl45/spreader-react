@@ -16,7 +16,7 @@
   }
   
   .compose-form-textarea {
-     
+    resize: none;
     background: none;
     border: 0;
     outline: none;
@@ -39,4 +39,5 @@
     border: 0;
     font-size: 0.9em;
     font-weight: bold;
+    cursor: pointer;
   }
