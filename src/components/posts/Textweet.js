@@ -1,5 +1,3 @@
-// ComposeForm.jsx
-//import Avatar from './Avatar'
 import '../../styles/textweet.scss'
 
 function Textweet() {
