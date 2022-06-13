@@ -8,11 +8,12 @@ function Textweet() {
       <div className="compose-form-container">
 
         <textarea
+          id="textarea"
           className="compose-form-textarea"
           placeholder="Quoi de neuf ?"
         />
       </div>
-      <button className="compose-form-submit">Spread</button>
+      <button id="bouton_textarea" className="compose-form-submit">Spread</button>
     </form>
   )
 }

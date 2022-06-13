@@ -9,7 +9,6 @@ const Blank = () => {
     <div className="accueil">
     <div className="accueil__text" > Accueil</div>
    <Textweet></Textweet>
-   {/* <Placeholder xs={12} bg="success" /> */}
    <Spread></Spread>
    </div>
     </Col>   
