@@ -1,0 +1,52 @@
+.username{
+    font-weight: bold;
+    position: relative;
+    top: 30px;
+    margin-left: 5px;
+  }
+
+  .spreadname{
+    margin-left: 66px;
+    opacity: 0;
+  }
+
+  .tweet{
+    display: flex;
+    align-items: center;
+  }
+
+.tweet{
+  img{
+      width: 52px;
+      height: 52px;
+      float: left;
+      margin-left: 5px;
+  }
+}
+.spread-text{
+  img{
+    width: 200px;
+    height: 125px;
+    margin-left: 66px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+
+  p{
+    margin-left: 66px;
+  }
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: solid black;
+    padding-bottom: 10px;
+    img{
+        height: 15px;
+        width: 15px;
+        cursor: pointer;
+        margin-left: 20%;
+    }
+}
