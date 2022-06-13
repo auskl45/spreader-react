@@ -1,13 +1,13 @@
 import
 
     class User {
+
         // level Number
         // xp Number
         // xpGoal Number
         // achivements Achivement[]
         // weeklyAchivements Achivement[]
         // badges Map<Badge, Boolean>
-
         constructor(achievements) {
             this.level = 1;
             this.xp = 0;
@@ -24,6 +24,9 @@ import
             this.badges.set(new Badge("badge2"), false); // � faire
         }
 
+        // Récupère l'achievement (dans un tableau) via le nom de l'achievement passé en paramètre
+        // achievement_name String
+        // return achievement []Achievement
         getAchievement(achievement_name) {
             let achievement = [];
 
@@ -44,11 +47,18 @@ import
             return achievement;
         }
 
+        // Incrémentation de l'avancement d'un achievement via son nom et la valeur de l'incrémentation, tous deux passés en paramètres
+        // achievement_name String
+        // value Number
+        // return [Number, Boolean] (correspondant à [valeur actuelle de l'avancement, booléen indiquant sa complétion ou non])
         majAchievement(achievement_name, value) {
             let achievement = this.getAchievement(achievement_name)[0];
             return achievement.majCurrent(value);
         }
 
+        // Valide la complétion d'un achievement et le supprime si toutes ses étapes sont terminées ou passe à l'étape suivante sinon
+        // achievement_name String
+        // return [][Number, Badge] (tableau de tableaux correspondant à [valeur des points d'expériences gagnés, Badge gagné])
         clearAchievement(achievement_name) {
             let cleared = [];
             let reward;
@@ -82,6 +92,8 @@ import
             return cleared;
         }
 
+        // Valide la complétion de tous les achievements et les supprime si toutes leurs étapes sont terminées ou passe à leur étape suivante sinon
+        // return [][Number, Badge] (tableau de tableaux pour chaque Achievement correspondant à [valeur des points d'expériences gagnés, Badge gagné])
         clearAllAchievements() {
             let cleared = [];
             let rewards;
@@ -103,6 +115,9 @@ import
             return cleared;
         }
 
+        // Ajout de la possession du badge lors de son obtention
+        // id_badge String
+        // return Boolean (si ajouté, ou non si non trouvé)
         addBadge(id_badge) {
             let added = false;
             for (let i = 0; i < this.badges.length; i++) {
@@ -114,6 +129,9 @@ import
             return added;
         }
 
+        // Ajout d'un nouveau Badge obtenable
+        // badge Badge
+        // return Boolean (si ajouté, ou non si mauvais paramètre)
         addBadgeAdmin(badge) {
             let added = false;
             if (badge instanceof Badge) {
@@ -123,6 +141,9 @@ import
             return added;
         }
 
+        // Ajout de points d'expériences
+        // value Number (points d'xp)
+        // return void
         addXp(value) {
             this.xp += value;
             if (this.xp >= xpGoal) {
@@ -130,6 +151,8 @@ import
             }
         }
 
+        // Montée de niveau
+        // return void
         levelUp() {
             this.level++;
             this.xp = - this.xpGoal;
@@ -150,7 +173,7 @@ class Achievement {
     // name String
     // description String
     // devdescription String
-    // goals_xps Map<Number, Object>
+    // goals_xps Map<Number, [Number, Badge]>
     // step Number
     // current Number
     // stepClear Boolean
