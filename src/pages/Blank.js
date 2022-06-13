@@ -1,6 +1,7 @@
 
 import '../styles/home.scss';
 import Textweet from '../components/posts/Textweet';
+import {Col} from 'react-bootstrap';
 import Spread from '../components/posts/Spread';
 const Blank = () => {
 
